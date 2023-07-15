@@ -1,4 +1,5 @@
 import { Hero, CustomFilter, SearchBar, CarCard } from '@/components'
+import { fuels, yearsOfProduction } from '@/constants';
 import { fetchCars } from '@/utils'
 import Image from 'next/image'
 
@@ -26,8 +27,8 @@ export default async function Home({ searchParams }: any) {
         <div className="home_filters">
             <SearchBar />
           <div className="home_filter-container">
-            <CustomFilter title="fuel" />
-            <CustomFilter title="Year" />
+            <CustomFilter title="fuel" options={fuels} />
+            <CustomFilter title="Year" options={yearsOfProduction} />
           </div>
         </div>
 
